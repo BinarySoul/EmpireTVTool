@@ -60,7 +60,7 @@ def get_genres(language):
             "Frauen": ["Comedy", "Spielshow: Drama", "Liebe", "Horror"],
             "Kinder": ["Fantasy", "Comedy", "SciFi", "Western", "Musik"],
             "Rentner": ["Doku", "Western", "Spielshow: Drama"],
-            "Paare": ["Liebe", "Drama", "Musik", "Spielshow: Horror"],
+            "Paare": ["Liebe", "Drama", "Musik", "Horror"],
             "Musiker": ["Musik", "Horror", "Fantasy", "Action", "Western"],
             "Sportler": ["Sport", "Liebe", "Doku", "Action", "Drama", "Comedy"],
             "Streber": ["SciFi", "Fantasy", "Doku", "Western", "Horror"]
@@ -70,7 +70,7 @@ def get_genres(language):
             "Women": ["Comedy", "Game Show: Drama", "Love", "Horror"],
             "Children": ["Fantasy", "Comedy", "SciFi", "Western", "Music"],
             "Elders": ["Documentary", "Western", "Game Show: Drama"],
-            "Lovers": ["Love", "Drama", "Music", "Game Show: Horror"],
+            "Lovers": ["Love", "Drama", "Music", "Horror"],
             "Rockers": ["Music", "Horror", "Fantasy", "Action", "Western"],
             "Athletes": ["Sport", "Love", "Documentary", "Action", "Drama", "Comedy"],
             "Nerds": ["SciFi", "Fantasy", "Documentary", "Western", "Horror"]
