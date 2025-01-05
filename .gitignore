@@ -1,0 +1,15 @@
+# Lokale Systemdateien ausschließen
+*.log
+*.tmp
+.DS_Store
+*.swp
+
+# Persönliche Ordner und Dateien ausschließen
+/.cache/
+/.config/
+/local/
+/Bilder/
+/Downloads/
+/Schreibtisch/
+/Games/
+/**/*~
