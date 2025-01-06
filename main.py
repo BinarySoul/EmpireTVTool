@@ -37,7 +37,7 @@ def get_prompt_message(language, key):
             "none_entered": "Keine Zielgruppen eingegeben.",
             "group": "Zielgruppe",
             "invalid_input": "Entschuldigung, diese Eingabe verstehe ich nicht. Bitte nochmal.",
-            "help": "Hallo und willkommen zum EmpireTV Audience Tool:\n\nDas Programm funktioniert folgendermaßen:\n1. Wenn du dazu aufgefordert wirst, eine Zielgruppe einzutragen, kannst du hier EINE der folgenden Gruppen eintragen: \033[1mMänner, Frauen, Kinder, Rentner, Paare, Musiker, Sportler, Streber\033[0m.\n2. Wenn du nur eine oder zwei Zielgruppen hast, kannst du die Aufforderung mit ENTER überspringen.\n3. In der Ausgabe findest du dann, geordnet nach Beliebtheit, welche Serien und Filme deine Zielgruppe mag. Je weiter die Farbe von Grün ins Rote geht, desto unbeliebter ist der Inhalt bei der Zielgruppe.\n4. Wenn du Buchstaben wie (M), (P), (Sp) oder so neben den Ausgaben siehst, dann bedeutet das, dass die Zielgruppe dahinter den Inhalt deines Programms zwar erträgt, aber nicht gut findet. Im Spiel gilt dies als Neutralität, es bringt keine Zuschauer und kostet auch keine.\n\nDie verfügbaren Buchstaben sind:\n(M) = Männer\n(F) = Frauen\n(K) = Kinder\n(R) = Rentner\n(P) = Paare\n(Mu) = Musiker\n(Sp) = Sportler\n(St) = Streber\n\n",
+            "help": "Hallo und willkommen zum EmpireTV Audience Tool:\n\nDas Programm funktioniert folgendermaßen:\n1. Wenn du dazu aufgefordert wirst, eine Zielgruppe einzutragen, kannst du hier EINE der folgenden Gruppen eintragen: \033[1mMänner, Frauen, Kinder, Rentner, Paare, Musicaler, Sportler, Streber\033[0m.\n2. Wenn du nur eine oder zwei Zielgruppen hast, kannst du die Aufforderung mit ENTER überspringen.\n3. In der Ausgabe findest du dann, geordnet nach Beliebtheit, welche Serien und Filme deine Zielgruppe mag. Je weiter die Farbe von Grün ins Rote geht, desto unbeliebter ist der Inhalt bei der Zielgruppe.\n4. Wenn du Buchstaben wie (M), (P), (Sp) oder so neben den Ausgaben siehst, dann bedeutet das, dass die Zielgruppe dahinter den Inhalt deines Programms zwar erträgt, aber nicht gut findet. Im Spiel gilt dies als Neutralität, es bringt keine Zuschauer und kostet auch keine.\n\nDie verfügbaren Buchstaben sind:\n(M) = Männer\n(F) = Frauen\n(K) = Kinder\n(R) = Rentner\n(P) = Paare\n(Mu) = Musicaler\n(Sp) = Sportler\n(St) = Streber\n\n",
         },
         "en": {
             "prompt": "Please enter up to 3 target groups (or 'exit' to quit or 'help' for help):",
@@ -45,7 +45,7 @@ def get_prompt_message(language, key):
             "none_entered": "No target groups entered.",
             "group": "Target group",
             "invalid_input": "Sorry, I didn't understand that input. Please try again.",
-            "help": "Hello and welcome to the EmpireTV Audience Tool:\n\nThis program works as follows:\n1. When prompted to enter a target group, you can input ONE of the following groups: \033[1mMen, Women, Children, Elders, Lovers, Musicians, Athletes, Nerds\033[0m.\n2. If you have only one or two target groups, you can skip the prompt by pressing ENTER.\n3. In the output, you will see a list of shows and movies sorted by popularity for your target group. The further the color shifts from green to red, the less popular the content is with the target group.\n4. If you see letters like (M), (P), (Sp), etc., next to the outputs, it means that the target group tolerates the content but does not enjoy it. In the game, this is considered neutral, bringing no viewers and costing none either.\n\nThe available letters are:\n(M) = Men\n(W) = Women\n(C) = Children\n(E) = Elders\n(L) = Lovers\n(Mu) = Musicians\n(A) = Athletes\n(N) = Nerds\n\n"
+            "help": "Hello and welcome to the EmpireTV Audience Tool:\n\nThis program works as follows:\n1. When prompted to enter a target group, you can input ONE of the following groups: \033[1mMen, Women, Children, Elders, Romancers, Musicians, Athletes, Nerds\033[0m.\n2. If you have only one or two target groups, you can skip the prompt by pressing ENTER.\n3. In the output, you will see a list of shows and movies sorted by popularity for your target group. The further the color shifts from green to red, the less popular the content is with the target group.\n4. If you see letters like (M), (P), (Sp), etc., next to the outputs, it means that the target group tolerates the content but does not enjoy it. In the game, this is considered neutral, bringing no viewers and costing none either.\n\nThe available letters are:\n(M) = Men\n(W) = Women\n(C) = Children\n(E) = Elders\n(L) = Romancers\n(Mu) = Musicians\n(A) = Athletes\n(N) = Nerds\n\n"
         }
     }
     return messages[language].get(key, "")
@@ -54,22 +54,22 @@ def get_genres(language):
     genre_data = {
         "de": {
             "Männer": ["Action", "Sport", "Western", "SciFi", "Horror", "Spielshow (Kultsendung)"],
-            "Frauen": ["Komödie", "Spielshow (Kultsendung)", "Liebe", "Horror"],
-            "Kinder": ["Fantasy", "Komödie", "Spielshow (Kultsendung)", "SciFi", "Western", "Musik", "Spielshow"],
+            "Frauen": ["Komödie", "Spielshow (Kultsendung)", "Romanze", "Horror"],
+            "Kinder": ["Fantasy", "Komödie", "Spielshow (Kultsendung)", "SciFi", "Western", "Musical", "Spielshow"],
             "Rentner": ["Doku", "Spielshow (16+)", "Western", "Spielshow", "Drama"],
-            "Paare": ["Liebe", "Drama", "Musik", "Horror", "Spielshow"],
-            "Musiker": ["Musik", "Spielshow", "Horror", "Fantasy", "Action", "Western"],
-            "Sportler": ["Sport", "Liebe", "Doku", "Action", "Drama", "Komödie", "Spielshow"],
+            "Paare": ["Romanze", "Drama", "Musical", "Horror", "Spielshow"],
+            "Musiker": ["Musical", "Spielshow", "Horror", "Fantasy", "Action", "Western"],
+            "Sportler": ["Sport", "Romanze", "Doku", "Action", "Drama", "Komödie", "Spielshow"],
             "Streber": ["SciFi", "Fantasy", "Doku", "Western", "Horror", "Spielshow"]
         },
         "en": {
             "Men": ["Action", "Sport", "Western", "SciFi", "Horror", "Game Show (Cult Show)"],
-            "Women": ["Comedy", "Game Show (Cult Show)", "Love", "Horror"],
+            "Women": ["Comedy", "Game Show (Cult Show)", "Romance", "Horror"],
             "Children": ["Fantasy", "Comedy", "Game Show (Cult Show)", "SciFi", "Western", "Music", "Game Show"],
             "Elders": ["Documentary", "Game Show (16+)", "Western", "Game Show", "Drama"],
-            "Lovers": ["Love", "Drama", "Music", "Horror", "Game Show"],
+            "Romancers": ["Romance", "Drama", "Music", "Horror", "Game Show"],
             "Musicians": ["Music", "Game Show", "Horror", "Fantasy", "Action", "Western"],
-            "Athletes": ["Sport", "Love", "Documentary", "Action", "Drama", "Comedy", "Game Show"],
+            "Athletes": ["Sport", "Romance", "Documentary", "Action", "Drama", "Comedy", "Game Show"],
             "Nerds": ["SciFi", "Fantasy", "Documentary", "Western", "Horror", "Game Show"]
         }
     }
@@ -78,17 +78,23 @@ def get_genres(language):
 def highlight_conditions():
     return {
         "de": {
-            "Männer": ["Spielshow (Kultsendung)", "Spielshow"],
-            "Musiker": ["Spielshow"],
-            "Kinder": ["Spielshow"],
-            "Sportler": ["Spielshow"],
+            "Männer": ["Spielshow (Kultsendung)", "Spielshow", "Komödie", "Doku"],
+            "Frauen": ["Horror"],
+            "Paare":  ["Fantasy", "Komödie"],
+            "Musiker": ["Spielshow", "Doku"],
+            "Kinder": ["Spielshow", "Musical", "Western"],
+            "Sportler": ["Spielshow", "Komödie"],
+            "Rentner": ["Sport", "Musical"],
             "Streber": ["Spielshow"]
         },
         "en": {
-            "Men": ["Game Show (Cult Show)", "Game Show"],
-            "Musicians": ["Game Show"],
-            "Children": ["Game Show"],
-            "Athletes": ["Game Show"],
+            "Men": ["Game Show (Cult Show)", "Game Show", "Comedy", "Documentary"],
+            "Women": ["Horror"],
+            "Romancers": ["Fantasy", "Comedy"],
+            "Musicians": ["Game Show", "Documentary"],
+            "Children": ["Game Show", "Music", "Western"],
+            "Athletes": ["Game Show", "Comedy"],
+            "Elders": ["Sport", "Music"],
             "Nerds": ["Game Show"]
         }
     }
@@ -130,7 +136,7 @@ def highlight_genre(genre, group, language):
             "Kinder": "K",
             "Rentner": "R",
             "Paare": "P",
-            "Musiker": "Mu",
+            "Musicaler": "Mu",
             "Sportler": "Sp",
             "Streber": "St"
         },
@@ -139,7 +145,7 @@ def highlight_genre(genre, group, language):
             "Women": "W",
             "Children": "C",
             "Elders": "E",
-            "Lovers": "L",
+            "Romancers": "L",
             "Musicians": "Mu",
             "Athletes": "A",
             "Nerds": "N"
